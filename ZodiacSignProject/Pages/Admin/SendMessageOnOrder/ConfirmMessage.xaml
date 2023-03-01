@@ -1,0 +1,39 @@
+﻿<Page x:Class="ZodiacSignProject.Pages.Admin.SendMessageOnOrder.ConfirmMessage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ZodiacSignProject.Pages.Admin.SendMessageOnOrder"
+      mc:Ignorable="d"
+      Title="ConfirmMessage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        
+        <ScrollViewer Grid.Row="0">
+        <TextBlock x:Name="Message"
+                   Style="{StaticResource Roboto}"
+                   FontSize="30"
+                   Width="1000"
+                   TextWrapping="Wrap"
+                   Foreground="#FFF"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center" />
+        </ScrollViewer>
+        
+        <Button x:Name="Confirm"
+                Grid.Row="1"
+                Width="400"
+                Height="60"
+                Content="Согласовать сообщение"
+                Background="#4F568D"
+                Foreground="#FFF"
+                Style="{StaticResource Rosarivo}"
+                FontSize="30"
+                Click="Confirm_OnClick">
+        </Button>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Application x:Class="ZodiacSignProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ZodiacSignProject"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+
+        <Style x:Key="Rosarivo">
+            <Setter Property="TextElement.FontFamily" 
+                    Value="./Fonts/#Rosarivo" />
+        </Style>
+
+        <Style x:Key="Roboto">
+            <Setter Property="TextElement.FontFamily" 
+                    Value="./Fonts/#Roboto" />
+        </Style>
+
+        <Style x:Key="Oswald">
+            <Setter Property="TextElement.FontFamily" 
+                    Value="./Fonts/#Oswald" />
+        </Style>
+
+    </Application.Resources>
+</Application>

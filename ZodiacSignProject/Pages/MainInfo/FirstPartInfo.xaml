@@ -1,0 +1,57 @@
+﻿<Page x:Class="ZodiacSignProject.Pages.MainInfo.FirstPartInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ZodiacSignProject.Pages.MainInfo"
+      mc:Ignorable="d"
+      Title="FirstPartInfo" >
+    <Grid Background="#000">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="800"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Позвольте лицензированным астрологам 
+                             интерпретировать вашу карту рождения"
+                       TextWrapping="Wrap"
+                       Style="{StaticResource Oswald}"
+                       FontSize="27"
+                       Foreground="#FFF"
+                       Height="180"
+                       Width="397" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center" />
+
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Ваша натальная карта сообщает вам о 
+                             возможностях вашего личностного роста 
+                             и наилучшее время для ваших самых важных решений."
+                       TextWrapping="Wrap"
+                       Style="{StaticResource Roboto}"
+                       FontSize="23"
+                       Foreground="#FFF"
+                       Height="110"
+                       Width="567" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center" />
+
+            <Image  Source="/Images/signs.png" 
+                    Grid.Column="1"
+                    Grid.Row="0" 
+                    Grid.RowSpan="2"
+                    HorizontalAlignment="Right"/>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,186 @@
+﻿<Page x:Class="ZodiacSignProject.Pages.Client.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="MainPage"
+      Background="Transparent">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0"
+                  Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Имя"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#FFF"
+                       BorderThickness="0"
+                       Style="{StaticResource Roboto}"
+                       FontSize="30" />
+
+                <Border Grid.Column="1"
+                        Background="#4F568D"
+                        BorderBrush="#4F568D"
+                        BorderThickness="1"
+                        Width="300"
+                        CornerRadius="30"
+                        Height="60">
+                    <TextBlock Text="{Binding NameClient}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="#FFF"
+                               Style="{StaticResource Roboto}"
+                               FontSize="20"
+                               Margin="20" />
+                </Border>
+
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Фамилия"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#FFF"
+                       BorderThickness="0"
+                       Style="{StaticResource Roboto}"
+                       FontSize="30" />
+
+                <Border Grid.Column="1"
+                        Background="#4F568D"
+                        BorderBrush="#4F568D"
+                        BorderThickness="1"
+                        Width="300"
+                        CornerRadius="30"
+                        Height="60">
+                    <TextBlock Text="{Binding SurnameClient}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="#FFF"
+                               Style="{StaticResource Roboto}"
+                               FontSize="20" />
+                </Border>
+
+            </Grid>
+
+            <Grid Grid.Row="2"
+                  Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Электронная почта"
+                       Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#FFF"
+                       BorderThickness="0"
+                       Style="{StaticResource Roboto}"
+                       FontSize="30" />
+
+                <Border Grid.Column="1"
+                        Background="#4F568D"
+                        BorderBrush="#4F568D"
+                        BorderThickness="1"
+                        Width="300"
+                        CornerRadius="30"
+                        Height="60">
+                    <TextBlock Text="{Binding EmailClient}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="#FFF"
+                               Style="{StaticResource Roboto}"
+                               FontSize="20" />
+                </Border>
+
+            </Grid>
+            
+            <Button x:Name="LookSignBtn"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Width="500"
+                    Height="80"
+                    Background="#4F568D"
+                    Foreground="#FFF"
+                    Style="{StaticResource Rosarivo}"
+                    FontSize="30"
+                    Margin="30"
+                    Click="LookSignBtn_OnClick">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" 
+                                Value="30"/>
+                    </Style>
+                </Button.Resources>
+                <TextBlock TextAlignment="Center">
+                    Просмотреть информацию о <LineBreak />
+                    знаках зодиаках
+                </TextBlock>
+            </Button>
+            
+            <Button x:Name="CreateOrderBtn"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Width="500"
+                    Height="60"
+                    Background="#4F568D"
+                    Foreground="#FFF"
+                    Content="Заказать натальную карту"
+                    Style="{StaticResource Rosarivo}"
+                    FontSize="30"
+                    Margin="20"
+                    Click="CreateOrderBtn_OnClick">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" 
+                                Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            <Button x:Name="EditProfileBtn"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Width="500"
+                    Height="60"
+                    Background="#4F568D"
+                    Foreground="#FFF"
+                    Content="Редактировать профиль"
+                    Style="{StaticResource Rosarivo}"
+                    FontSize="30"
+                    Margin="20"
+                    Click="EditProfileBtn_OnClick">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" 
+                                Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+        </Grid>
+    </Grid>
+</Page>

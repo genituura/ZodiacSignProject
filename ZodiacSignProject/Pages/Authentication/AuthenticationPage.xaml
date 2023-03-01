@@ -1,0 +1,101 @@
+﻿<Page x:Class="ZodiacSignProject.Pages.Authentication.AuthenticationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ZodiacSignProject.Pages.Authentication"
+      mc:Ignorable="d"
+      Title="AuthenticationPage"
+      Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Введите Ваш логин"
+                   Foreground="#FFF"
+                   Style="{StaticResource Rosarivo}"
+                   FontSize="27"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+        
+        <TextBox x:Name="LoginBox"
+                 Grid.Row="0" 
+                 Grid.Column="1" 
+                 Width="410"
+                 Height="50"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 Padding="20 0 0 0"
+                 Background="#4F568D"
+                 Foreground="#FFF"
+                 Style="{StaticResource Rosarivo}"
+                 FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" 
+                            Value="30"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Введите Ваш пароль"
+                   Foreground="#FFF"
+                   Style="{StaticResource Rosarivo}"
+                   FontSize="27"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+        
+        <TextBox x:Name="PasswordBox"
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Width="410"
+                 Height="50"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 Padding="20 0 0 0"
+                 Background="#4F568D"
+                 Foreground="#FFF"
+                 Style="{StaticResource Rosarivo}"
+                 FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" 
+                            Value="30"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        <Button x:Name="AuthBtn"
+                Grid.Row="2"
+                Grid.ColumnSpan="2" 
+                Grid.Column="0"
+                Width="270"
+                Height="60"
+                Content="Войти"
+                Background="#4F568D"
+                Foreground="#FFF"
+                Style="{StaticResource Rosarivo}"
+                FontSize="30"
+                Click="AuthBtn_OnClick">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" 
+                            Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        
+    </Grid>
+</Page>

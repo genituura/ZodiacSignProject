@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\MainInfo\signs.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZodiacSignLibrary\ZodiacSignLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\Client\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\planet.png" />
+    <Resource Include="Images\planet.png" />
+    <None Remove="Images\sign.png" />
+    <Resource Include="Images\sign.png" />
+    <None Remove="Images\signs.png" />
+    <Resource Include="Images\signs.png" />
+    <None Remove="Fonts\Oswald.ttf" />
+    <Resource Include="Fonts\Oswald.ttf" />
+    <None Remove="Fonts\Roboto.ttf" />
+    <Resource Include="Fonts\Roboto.ttf" />
+    <None Remove="Fonts\Rosarivo.ttf" />
+    <Resource Include="Fonts\Rosarivo.ttf" />
+  </ItemGroup>
+
+</Project>
